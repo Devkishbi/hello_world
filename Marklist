@@ -1,0 +1,59 @@
+
+import java.util.*;
+/**
+ * 
+ */
+ class Marks
+   {
+	 
+		public static void main(String args[])
+		{
+	
+			Mark obj=new Mark();
+			int res=obj.assigning();
+			System.out.println(res);
+	
+		}
+		
+    }
+		class Mark 
+	{	  	//variable declaration
+	   int i,j,tot=0,stu_tot=0,temp=0;
+	   int marks[][],stu_total[];
+	   void assigning()
+		{
+		  Random rand=new Random();
+		  stu_tot=0;
+		  System.out.println();
+		  for(i=0;i<100;i++)
+		    {
+			 marks[i][j]=rand.nextInt(100);
+			 System.out.println(marks[i][j]);
+			 tot=tot+marks[i][j];
+			 stu_tot=stu_tot+marks[i][j];
+			 stu_total[i]=stu_tot;
+			
+		
+		    }
+		 System.out.println("");
+		
+	    }
+	   void checking()
+	 {-
+		 //to check the highest mark in each subject
+		 for(i=0;i<3;i++)
+		 {
+			 for(j=0;j<100;j++)
+			 {
+				 if(marks[j][i]>temp)
+				 {
+					 temp=marks[j][i];
+				 }
+			 } 
+		  }
+		 System.out.println("highhest mark in sub"+i+"is"+temp+"taken by Rollno ["+j+"]");
+
+	   } 
+
+ 
+	 }
